@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — J&E HOME APPLIANCES</title>
+  <link rel="icon" type="image/svg+xml" href="icons/J&E Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-left">
+        <a class="logo" href="index.html">
+          <img class="logo-mark" src="icons/J&E Logo.png" alt="J&E HOME APPLIANCES">
+          <span class="logo-text">J&E<small> HOME APPLIANCES</small></span>
+        </a>
+        <a class="back-to-catalog-link" href="index.html">&larr; Back to catalog</a>
+      </div>
+      <div class="topbar-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch between light and dark mode"
+          title="Toggle light / dark mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          Cart <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap detail-wrap" id="checkoutRoot">
+    <!-- populated by checkout.js -->
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Demo storefront concept — illustrative products, pricing, and specs. Not an official TCL site.</p>
+      <p>Orders are handed off to Messenger for manual confirmation; no payment is processed on this page.</p>
+    </div>
+  </footer>
+
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your cart</h3>
+      <button class="drawer-close" id="drawerClose" aria-label="Close cart">&times;</button>
+    </div>
+    <div class="drawer-items" id="drawerItems"></div>
+    <div class="drawer-foot" id="drawerFoot"></div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="products.js"></script>
+  <script src="cart.js"></script>
+  <script src="checkout.js"></script>
+
+</body>
+
+</html>
